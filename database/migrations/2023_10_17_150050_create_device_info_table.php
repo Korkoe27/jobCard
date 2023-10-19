@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->timestamps();
             $table->string('job_card_number');
+            // $table->date('job_card_date');
             $table->string('equipment_model');
             $table->string('serial_number');
             $table->string('dvd_cd_rom')->nullable();

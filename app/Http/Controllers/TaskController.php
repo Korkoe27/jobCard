@@ -14,6 +14,10 @@ class TaskController extends Controller
     public function index()
     {
         //
+
+        $datas = deviceInfo::all();
+
+        return view('dashboard' ,compact('datas'));
     }
 
     /**
@@ -35,6 +39,7 @@ class TaskController extends Controller
         $data = new deviceInfo();
 
         $data -> job_card_number = $request -> input('job_card_number');
+        // $data -> job_card_date = $request -> input('job_card_date');
         $data -> equipment_model = $request -> input('equipment_model');
         $data -> serial_number = $request -> input('serial_number');
         $data -> dvd_cd_rom = $request -> input('dvd_cd_rom');

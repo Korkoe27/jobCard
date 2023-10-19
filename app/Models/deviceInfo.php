@@ -13,6 +13,7 @@ class deviceInfo extends Model
 
     protected $fillable = [
         'job_card_number',
+        // 'job_card_date',
         'equipment_model',
         'serial_number',
         'dvd_cd_rom',
@@ -30,4 +31,6 @@ class deviceInfo extends Model
         'complainant_unit',
         'complainant_contact'
     ];
+
+
 }

@@ -8,7 +8,7 @@
 }
   </style>
 
-  <form action="{{route('jobCard.store')}}" id="submit" method="POST">
+  <form action="{{route('jobCard.store')}}" id="submit" onsubmit="handleSubmit(event)" method="POST">
   <div class="mx-4 flex flex-wrap">
   
   @csrf
@@ -245,6 +245,7 @@
            </div>
       </div>
       <input type="hidden" name="job_card_number" id="job_card_number">
+      {{-- <input type="date" style="display: none" name="job_card_date" id="job_card_date"> --}}
   
   
       <div class="mx-auto flex justify-center">
@@ -336,7 +337,24 @@
         document.getElementById('job_card_number').value = random4DigitNumber;
     
   }
-  
+
+
+  function generateCurrentDate(){
+   let currentDate = new Date();
+
+   return currentDate;
+
+   
+    
+  }
+
+
+  function handleSubmit(event) {
+    // event.preventDefault();
+
+    let currentDate = generateCurrentDate();
+  }
+
   
   
   
